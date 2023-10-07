@@ -44,6 +44,7 @@ To verify a user, the user must enter a verification code in the Discord channel
 ### Lua `network.post` Function of https://lua.neverlose.cc/
 
 ```lua
+-- hardcoded username, if u want normal just us common to get cheat username
 local username = "your_username"
 local data = { username = username }
 local headers = { ["Content-Type"] = "application/x-www-form-urlencoded" }
