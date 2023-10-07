@@ -40,6 +40,18 @@ python bot.py
 
 To verify a user, the user must enter a verification code in the Discord channel specified in the `bot.py` file. The verification code can be obtained by running the `/token` command in the bot channel.
 
+
+### Lua `network.post` Function
+
+```lua
+local username = "your_username"
+local data = { username = username }
+local headers = { ["Content-Type"] = "application/x-www-form-urlencoded" }
+local url = "https://your-api-url/token.php"
+
+local response = network.post(url, data, headers)
+-- Parse the response as needed
+```
 **Example**
 
 
