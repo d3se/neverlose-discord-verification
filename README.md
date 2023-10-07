@@ -24,13 +24,25 @@ pip install discord.py requests
 
 3. Set up your Discord Bot on the Discord Developer Portal: https://discord.com/developers/applications and obtain a bot token. Replace `"YOUR_BOT_TOKEN"` in the `bot.py` file with your bot token.
 
-4. Create a MySQL database and set up the tables using the provided SQL queries in `database.sql`.
+4. Create a MySQL database and set up the tables using the following SQL queries:
+   
+  ```sql
+CREATE TABLE verification_tokens (
+    id INT NOT NULL AUTO_INCREMENT,
+    username VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    token VARCHAR(255) COLLATE utf8mb4_general_ci NOT NULL,
+    verified TINYINT(1) DEFAULT 0,
+    PRIMARY KEY (id),
+    UNIQUE KEY usernameIndex (username),
+    UNIQUE KEY tokenIndex (token)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+```
+   
+6. Update the PHP files (`token_verify.php` and `token.php`) with your database credentials (`$host`, `$db`, `$user`, `$pass`) and adjust any other settings if needed.
 
-5. Update the PHP files (`token_verify.php` and `token.php`) with your database credentials (`$host`, `$db`, `$user`, `$pass`) and adjust any other settings if needed.
+7. Upload the PHP files to a web server or use a local server environment like XAMPP.
 
-6. Upload the PHP files to a web server or use a local server environment like XAMPP.
-
-7. Start the bot:
+8. Start the bot:
 
 ```bash
 python bot.py
