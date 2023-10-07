@@ -17,7 +17,7 @@ Before you begin, make sure you have the following installed on your system:
 
    ```bash
    git clone https://github.com/your-username/discord-verification-bot.git
-   ```
+   
 
 2. Install the required Python packages:
 
