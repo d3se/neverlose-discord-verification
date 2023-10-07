@@ -38,13 +38,13 @@ python bot.py
 
 **Usage**
 
-To verify a user, the user must enter a verification code in the Discord channel specified in the `bot.py` file. The verification code can be obtained by running the `!token` command in the bot channel.
+To verify a user, the user must enter a verification code in the Discord channel specified in the `bot.py` file. The verification code can be obtained by running the `/token` command in the bot channel.
 
 **Example**
 
 
-User: !token
-Bot: Your verification code is 123456. Please send this code to the bot in the verification channel to verify your account.
+User: generate token in neverlose 
+csgo cmd: Your verification code is 123456. Please send this code to the bot in the verification channel to verify your account.
 User: (goes to the verification channel and sends the code 123456 to the bot)
 Bot: Your account has been successfully verified!
 
