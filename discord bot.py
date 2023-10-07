@@ -12,13 +12,16 @@ async def on_ready():
 
 @client.hybrid_command()
 async def verify(ctx, code: str):
-  if ctx.channel.id == 1145336638877208596:
+  # specific channel id where u want the verification to be processed
+  if ctx.channel.id == 18769420:
     request = requests.post("https://yoururl/token_verify.php", data = {"token": code})
     data = request.json()
     error = data["status"]
     if error == "success":
       username = data["username"]
+      # adjust role to whatever u named the role verified people get
       role = discord.utils.get(ctx.guild.roles, name='customer')
+      # set the nickname to neverlose username
       await ctx.author.edit(nick=username)
       await ctx.author.add_roles(role)
       await ctx.reply('Successfully verified', ephemeral = True)
