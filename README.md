@@ -1,6 +1,6 @@
 **Description**
 
-This Discord bot verifies users using a PHP backend. It uses a database to store user tokens and whether or not they have been verified. When a user enters a verification code, the bot checks the database to see if the code is valid and if the user has already been verified. If the code is valid and the user has not been verified, the bot updates the database to mark the user as verified and gives the user the appropriate role.
+This Discord bot verifies users using a PHP backend. It uses a database to store user tokens and whether or not they have been verified. When a user enters a verification code, the bot checks the database to see if the code is valid and if the user has already been verified. If the code is valid and the user has not been verified, the bot updates the database to mark the user as verified and gives the user the appropriate role. So every code is only one-time use, and unique for every username, meaining if someone would try to generate for then 1 verification token, it would always respond with the same one, and no additional sql rows would get created.
 
 **Requirements**
 
