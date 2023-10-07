@@ -1,33 +1,28 @@
+**Description**
 
+This Discord bot verifies users using a PHP backend. It uses a database to store user tokens and whether or not they have been verified. When a user enters a verification code, the bot checks the database to see if the code is valid and if the user has already been verified. If the code is valid and the user has not been verified, the bot updates the database to mark the user as verified and gives the user the appropriate role.
 
-```markdown
-# Discord Bot Verification using PHP APIs
+**Requirements**
 
-This repository contains a Discord bot written in Python that verifies users using a PHP API. If you're relatively new to both Python and PHP, but not a complete beginner, this README will guide you through setting up and understanding the code.
+* Python 3.7+
+* PHP
+* MySQL database (or a compatible database)
 
-## Prerequisites
-
-Before you begin, make sure you have the following installed on your system:
-
-- Python (3.7+)
-- PHP
-- A MySQL database (or a compatible database)
-
-## Getting Started
+**Installation**
 
 1. Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/your-username/discord-verification-bot.git
-   ```
+```bash
+git clone https://github.com/your-username/discord-verification-bot.git
+```
 
 2. Install the required Python packages:
 
-   ```bash
-   pip install discord.py requests
-   ```
+```bash
+pip install discord.py requests
+```
 
-3. Set up your Discord Bot on the [Discord Developer Portal](https://discord.com/developers/applications) and obtain a bot token. Replace `"YOUR_BOT_TOKEN"` in the `bot.py` file with your bot token.
+3. Set up your Discord Bot on the Discord Developer Portal: https://discord.com/developers/applications and obtain a bot token. Replace `"YOUR_BOT_TOKEN"` in the `bot.py` file with your bot token.
 
 4. Create a MySQL database and set up the tables using the provided SQL queries in `database.sql`.
 
@@ -37,30 +32,34 @@ Before you begin, make sure you have the following installed on your system:
 
 7. Start the bot:
 
-   ```bash
-   python bot.py
-   ```
-
-## Bot Commands
-
-- `!verify <code>`: Verify a user using a verification code. Replace `<code>` with the verification code provided.
-
-## Understanding the Code
-
-- `bot.py` contains the Discord bot's code written in Python using the `discord.py` library. It listens for the `!verify` command and communicates with the PHP API to verify users.
-
-- `token_verify.php` is the PHP script responsible for verifying user tokens and updating the database accordingly.
-
-- `token.php` generates unique verification tokens for users.
-
-## Important Notes
-
-- Make sure to secure your PHP files and database credentials to prevent unauthorized access.
-
-- This bot assumes you have a specific channel ID for verification. You can change this channel ID to match your server's requirements.
-
-- The code provided here is a starting point and may need further customization and security improvements for a production environment.
-
-Feel free to reach out if you have any questions or need assistance with this Discord bot setup!
+```bash
+python bot.py
 ```
 
+**Usage**
+
+To verify a user, the user must enter a verification code in the Discord channel specified in the `bot.py` file. The verification code can be obtained by running the `!token` command in the bot channel.
+
+**Example**
+
+
+User: !token
+Bot: Your verification code is 123456. Please send this code to the bot in the verification channel to verify your account.
+User: (goes to the verification channel and sends the code 123456 to the bot)
+Bot: Your account has been successfully verified!
+
+
+**Troubleshooting**
+
+If you are having trouble with the bot, please check the following:
+
+* Make sure that the bot token in the `bot.py` file is correct.
+* Make sure that the database credentials in the `token_verify.php` and `token.php` files are correct.
+* Make sure that the PHP files are uploaded to a web server and are accessible to the bot.
+* Make sure that the bot has the correct permissions in the Discord server.
+
+If you are still having trouble, please feel free to create an issue on GitHub.
+
+**Contributing**
+
+If you would like to contribute to the bot, please fork this repository and create a pull request with your changes.
