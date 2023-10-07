@@ -41,7 +41,7 @@ python bot.py
 To verify a user, the user must enter a verification code in the Discord channel specified in the `bot.py` file. The verification code can be obtained by running the `/token` command in the bot channel.
 
 
-### Lua `network.post` Function
+### Lua `network.post` Function of https://lua.neverlose.cc/
 
 ```lua
 local username = "your_username"
