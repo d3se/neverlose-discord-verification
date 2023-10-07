@@ -43,10 +43,10 @@ To verify a user, the user must enter a verification code in the Discord channel
 **Example**
 
 
-User: generate token in neverlose 
-csgo cmd: Your verification code is 123456. Please send this code to the bot in the verification channel to verify your account.
-User: (goes to the verification channel and sends the code 123456 to the bot)
-Bot: Your account has been successfully verified!
+1. User: generate token in neverlose 
+2. csgo cmd: Your verification code is 123456. Please send this code to the bot in the verification channel to verify your account.
+3. User: (goes to the verification channel and sends the code 123456 to the bot)
+4. Bot: Your account has been successfully verified!
 
 
 **Troubleshooting**
